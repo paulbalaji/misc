@@ -11,6 +11,7 @@ var families = fs.readFileSync('names.txt').toString().split("\n")
 var right = families;
 var left = right.splice(0, families.length / 2);
 
+// generate pairs
 var pairs = [];
 for (j in left) {
     var pair = {x: '', y: ''};
@@ -19,8 +20,7 @@ for (j in left) {
     pairs[j] = pair;
 }
 
+// print out the pairs to console
 for (pair in pairs) {
     console.log(pairs[pair].x + " PAIRED WITH " + pairs[pair].y);
 }
-
-// map numbers with names
