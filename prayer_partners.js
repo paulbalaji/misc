@@ -12,15 +12,8 @@ var right = families;
 var left = right.splice(0, families.length / 2);
 
 // generate pairs
-var pairs = [];
 for (j in left) {
-    var pair = {x: '', y: ''};
-    pair.x = left[j];
-    pair.y = right[(j + offset) % right.length];
-    pairs[j] = pair;
-}
-
-// print out the pairs to console
-for (pair in pairs) {
-    console.log(pairs[pair].x + " PAIRED WITH " + pairs[pair].y);
+    var x = left[j];
+    var y = right[(j + offset) % right.length];
+    console.log(x + " PAIRED WITH " + y);
 }
