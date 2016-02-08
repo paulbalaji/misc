@@ -1,7 +1,7 @@
 var fs = require('fs');
 
-// change this every month
-var offset = 1;
+// pass in the offset when calling the program
+var offset = process.argv[2];
 
 // read in data from names.txt
 // put names into a list
